@@ -1,0 +1,16 @@
+test_id,category,entity,assertion_name,target_rule,failing_record_count,status,operational_notes
+DQ-01,Uniqueness,fact_order_delivery,order_id uniqueness,COUNT(DISTINCT order_id) == COUNT(*),0,PASS,Primary key is unique
+DQ-02,Uniqueness,dim_customer,customer_unique_id uniqueness,COUNT(DISTINCT customer_unique_id) == COUNT(*),0,PASS,Customer master key is unique
+DQ-03,Uniqueness,dim_seller,seller_id uniqueness,COUNT(DISTINCT seller_id) == COUNT(*),0,PASS,Seller master key is unique
+DQ-04,Uniqueness,dim_product,product_id uniqueness,COUNT(DISTINCT product_id) == COUNT(*),0,PASS,Product master key is unique
+DQ-05,Completeness,orders_feature_matrix,purchase_timestamp not null,order_purchase_timestamp IS NOT NULL,0,PASS,No missing purchase timestamps
+DQ-06,Completeness,orders_feature_matrix,promised_lead_time_days not null,promised_lead_time_days IS NOT NULL,0,PASS,No missing promised lead times
+DQ-07,Completeness,orders_feature_matrix,ground_truth_target not null,is_late IS NOT NULL,0,PASS,100% ground truth labeled
+DQ-08,Domain_Range,fact_order_items,item price non-negative,price >= 0.00,0,PASS,All merchandise prices are valid
+DQ-09,Domain_Range,fact_order_items,freight non-negative,freight_value >= 0.00,0,PASS,All freight values are valid
+DQ-10,Domain_Range,fact_model_scored_orders,"probabilities bounded in [0, 1]",0.0 <= predicted_prob <= 1.0,0,PASS,Model outputs valid mathematical probabilities
+DQ-11,Referential_Integrity,fact_order_items -> fact_order_delivery,item foreign key integrity,fact_order_items.order_id IN fact_order_delivery.order_id,0,PASS,No orphaned order item rows
+DQ-12,Referential_Integrity,fact_order_items -> dim_seller,seller foreign key integrity,fact_order_items.seller_id IN dim_seller.seller_id,0,PASS,No orphaned seller records
+DQ-13,Chronology,orders_feature_matrix (clean subset),carrier handover after purchase,carrier_date >= purchase_timestamp,0,PASS,100% chronologically valid in clean subset
+DQ-14,Chronology,orders_feature_matrix (clean subset),customer delivery after carrier handover,delivery_date >= carrier_date,0,PASS,100% chronologically valid in clean subset
+DQ-15,Chronology_Audit,orders_feature_matrix (raw unfiltered),carrier handover timestamp precedence,ALL carrier_date >= purchase_timestamp,158,FAIL,Real finding: 158 historical records exhibit carrier handover recorded prior to purchase timestamp; retained in feature matrix with is_anomalous_sequence=1 flag.

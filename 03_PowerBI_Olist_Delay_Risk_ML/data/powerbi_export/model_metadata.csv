@@ -1,0 +1,29 @@
+property,value
+Model Algorithm,Logistic Regression (Balanced)
+Selection Rule,Highest Validation PR-AUC across 4 candidates
+Calibration Method,Platt Scaling (Sigmoid)
+Train Window,2017-01-05 to 2018-02-28
+Validation Window,2018-03-01 to 2018-05-31
+Test Window,2018-06-01 to 2018-08-22
+Test Sample Size,18107
+Test Positive Prevalence,3.69%
+Test PR-AUC,0.2933
+Primary Lift vs Lead Heuristic (0.1344),2.18x
+Lift vs Prior Baseline (0.0369),7.94x
+Test ROC-AUC,0.8364
+Calibrated Brier Score,0.0439
+Brier Skill Score vs Prior,-0.2035
+May-Recalibrated Brier Score,0.0344
+Calibrated ECE,0.0991
+Uncalibrated ECE,0.5707
+Top 2% Queue Precision,41.99%
+Top 2% Queue Recall,22.72%
+Top 2% Queue Orders,362 (2.0%)
+Top 5% Queue Precision,27.85%
+Top 5% Queue Recall,37.67%
+Top 5% Queue Orders,905 (5.0%)
+Top 10% Queue Precision,19.34%
+Top 10% Queue Recall,52.32%
+Top 10% Queue Orders,1810 (10.0%)
+F1 Optimal Threshold,0.1581
+PR-AUC 95% CI,[0.2603 - 0.3251]

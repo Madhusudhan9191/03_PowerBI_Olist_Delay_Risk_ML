@@ -1,0 +1,10 @@
+filter_category,status_or_reason,orders_count,pct_of_all_orders,action
+order_status,delivered (retained),96478,97.0203,Retain (subject to valid delivery date)
+order_status,status == 'shipped',1107,1.1132,Excluded (unfulfilled / in-transit / canceled)
+order_status,status == 'canceled',625,0.6285,Excluded (unfulfilled / in-transit / canceled)
+order_status,status == 'unavailable',609,0.6124,Excluded (unfulfilled / in-transit / canceled)
+order_status,status == 'invoiced',314,0.3158,Excluded (unfulfilled / in-transit / canceled)
+order_status,status == 'processing',301,0.3027,Excluded (unfulfilled / in-transit / canceled)
+order_status,status == 'created',5,0.005,Excluded (unfulfilled / in-transit / canceled)
+order_status,status == 'approved',2,0.002,Excluded (unfulfilled / in-transit / canceled)
+data_quality,delivered status but null order_delivered_customer_date,8,0.008,Excluded (missing ground truth outcome)

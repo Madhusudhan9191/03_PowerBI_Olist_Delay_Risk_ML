@@ -1,0 +1,13 @@
+metric_id,metric_name,python_value,sql_value,dax_value,difference_py_vs_sql,sql_layer_status,dax_layer_status,reconciliation_verdict
+M01,Total Warehouse Orders,99441.0,99441.0,99441.0,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M02,Valid Delivered Orders,96470.0,96470.0,96470.0,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M03,Late Delivered Orders (Date-Level),6534.0,6534.0,6534.0,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M04,On-Time Delivered Orders (Date-Level),89936.0,89936.0,89936.0,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M05,Late Delivery Rate (%),6.7731,6.7731,6.7731,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M06,Total Order Items Count,112650.0,112650.0,PENDING_DESKTOP,0.0,PASS,NOT_EVALUATED (Pending Desktop Run),PASS (Python == SQL)
+M07,Total Item Revenue (BRL),13591643.7,13591643.7,13591643.7,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M08,Total Freight Value (BRL),2251909.54,2251909.54,2251909.54,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M09,Test Set Evaluated Orders,18107.0,18107.0,18107.0,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M10,Test Set Actual Late Orders,669.0,669.0,669.0,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M11,Test Set Late Rate (%),3.6947,3.6947,3.6947,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)
+M12,Top 2% Queue True Positives (152 late caught),152.0,152.0,152.0,0.0,PASS,PASS,PASS (All 3 Layers Reconciled)

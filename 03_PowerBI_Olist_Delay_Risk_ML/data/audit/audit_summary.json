@@ -1,0 +1,143 @@
+{
+  "reconciliation_summary": {
+    "total_checks": 31,
+    "passed_checks": 31,
+    "failed_checks": 0
+  },
+  "target_definition": {
+    "total_raw_orders": 99441,
+    "raw_delivered": 96478,
+    "delivered_missing_date": 8,
+    "valid_delivered_orders": 96470,
+    "date_level_late_orders": 6534,
+    "date_level_ontime_orders": 89936,
+    "date_level_late_rate_pct": 6.7731,
+    "timestamp_level_late_orders": 7826,
+    "ts_vs_date_diff": 1292,
+    "same_day_delivery_count": 1292
+  },
+  "status_breakdown": {
+    "delivered": 96478,
+    "shipped": 1107,
+    "canceled": 625,
+    "unavailable": 609,
+    "invoiced": 314,
+    "processing": 301,
+    "created": 5,
+    "approved": 2
+  },
+  "timestamp_anomalies": [
+    {
+      "anomaly_check": "carrier_ts < purchase_ts (carrier before purchase)",
+      "count": 165,
+      "pct_of_valid_delivered": 0.171
+    },
+    {
+      "anomaly_check": "carrier_ts < approved_ts (carrier before approved)",
+      "count": 1350,
+      "pct_of_valid_delivered": 1.3994
+    },
+    {
+      "anomaly_check": "customer_ts < carrier_ts (delivery before carrier)",
+      "count": 23,
+      "pct_of_valid_delivered": 0.0238
+    },
+    {
+      "anomaly_check": "customer_ts < purchase_ts (delivery before purchase)",
+      "count": 0,
+      "pct_of_valid_delivered": 0.0
+    },
+    {
+      "anomaly_check": "customer_ts < approved_ts (delivery before approved)",
+      "count": 61,
+      "pct_of_valid_delivered": 0.0632
+    },
+    {
+      "anomaly_check": "null carrier_ts among valid delivered",
+      "count": 1,
+      "pct_of_valid_delivered": 0.001
+    },
+    {
+      "anomaly_check": "null approved_ts among valid delivered",
+      "count": 14,
+      "pct_of_valid_delivered": 0.0145
+    },
+    {
+      "anomaly_check": "warehouse is_anomalous_sequence (any anomaly)",
+      "count": 1373,
+      "pct_of_valid_delivered": 1.4232
+    }
+  ],
+  "sensitivity_analysis": {
+    "full_valid_delivered_orders": 96470,
+    "full_valid_delivered_late_orders": 6534,
+    "full_valid_delivered_late_rate_pct": 6.7731,
+    "clean_fulfillment_orders": 95097,
+    "clean_fulfillment_late_orders": 6510,
+    "clean_fulfillment_late_rate_pct": 6.8456,
+    "anomalous_fulfillment_orders": 1373,
+    "anomalous_fulfillment_late_orders": 24,
+    "anomalous_fulfillment_late_rate_pct": 1.748,
+    "late_rate_difference_clean_vs_full_pp": 0.0726
+  },
+  "spike_months": {
+    "feb_2018_late_rate_pct": 14.13,
+    "mar_2018_late_rate_pct": 18.96,
+    "steady_state_avg_late_rate_pct": 6.79
+  },
+  "transit_distribution": {
+    "p50_days": 7.1,
+    "p75_days": 12.03,
+    "p90_days": 18.9,
+    "p95_days": 24.2,
+    "p99_days": 40.98,
+    "max_days": 205.19,
+    "mean_days": 9.33
+  },
+  "dates_coverage": {
+    "raw_last_purchase": "2018-10-17 17:30:18",
+    "delivered_last_purchase": "2018-08-29 15:00:37",
+    "delivered_last_carrier": "2018-09-11 19:48:28",
+    "delivered_last_customer": "2018-10-17 13:22:46",
+    "raw_orders_after_2018_08_22": 535,
+    "delivered_orders_after_2018_08_22": 496,
+    "non_delivered_orders_after_2018_08_22": 39
+  },
+  "order_composition": {
+    "total_orders_in_items": 98666,
+    "single_item_orders": 88863,
+    "multi_item_orders": 9803,
+    "multi_item_pct": 9.94,
+    "max_items": 21,
+    "single_seller_orders": 97388,
+    "multi_seller_orders": 1278,
+    "multi_seller_pct": 1.3,
+    "max_sellers": 5,
+    "items_per_order_distribution": {
+      "1": 88863,
+      "2": 7516,
+      "3": 1322,
+      "4": 505,
+      "5": 204,
+      "6": 198,
+      "7": 22,
+      "8": 8,
+      "9": 3,
+      "10": 8,
+      "11": 4,
+      "12": 5,
+      "13": 1,
+      "14": 2,
+      "15": 2,
+      "20": 2,
+      "21": 1
+    },
+    "sellers_per_order_distribution": {
+      "1": 97388,
+      "2": 1219,
+      "3": 54,
+      "4": 3,
+      "5": 2
+    }
+  }
+}

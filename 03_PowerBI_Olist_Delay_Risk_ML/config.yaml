@@ -1,0 +1,48 @@
+# Project Configuration: Olist Delivery-Delay Risk Model
+project_name: "Olist Delivery-Delay Risk Model"
+version: "1.0.0"
+
+# Reproducibility
+random_seed: 42
+
+# Paths (relative to 03_PowerBI_Olist_Delay_Risk_ML root)
+paths:
+  raw_data_dir: "data/raw"
+  warehouse_dir: "data/warehouse"
+  processed_data_dir: "data/processed"
+  audit_data_dir: "data/audit"
+  models_dir: "models"
+  documentation_dir: "documentation"
+  powerbi_export_dir: "data/powerbi_export"
+
+# Source & License
+dataset:
+  source: "Brazilian E-Commerce Public Dataset by Olist (Kaggle)"
+  url: "https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce"
+  license: "CC BY-NC-SA 4.0"
+
+# Target Definition & Business Rules
+target:
+  target_col: "is_late"
+  definition: "order_delivered_customer_date_only > order_estimated_delivery_date_only"
+  grain: "order"
+  valid_status: "delivered"
+  prediction_moment: "order_delivered_carrier_date"
+  alternative_prediction_moment: "order_approved_at"
+
+# Control Totals (from validated warehouse / profiling_results.json)
+control_totals:
+  total_orders: 99441
+  valid_delivered_orders: 96470
+  on_time_orders: 89936
+  late_orders: 6534
+  late_rate_pct: 6.7731
+
+# Modelling Window & Warm-up
+modelling_window:
+  warmup_start: "2016-09-04"
+  warmup_end: "2016-12-31"
+  model_start: "2017-01-01"
+  model_end: "2018-08-22"
+  right_censoring_cutoff: "2018-08-22"
+  dataset_last_purchase: "2018-10-17"

@@ -1,0 +1,7 @@
+fold_id,model_name,train_window,val_window,train_rows,train_late_count,train_late_rate_pct,val_rows,val_late_count,val_late_rate_pct,val_pr_auc,val_roc_auc,val_brier_score,val_lift_vs_prior,notes
+Fold_1,Logistic Regression,2017-01-01 to 2017-10-31,2017-11-01 to 2018-01-31,30625,1138,3.72,19870,1718,8.65,0.2792,0.6891,0.073,3.23,Early marketplace expansion into Q4 2017 peak
+Fold_1,HistGradientBoosting,2017-01-01 to 2017-10-31,2017-11-01 to 2018-01-31,30625,1138,3.72,19870,1718,8.65,0.329,0.7377,0.0701,3.8,Early marketplace expansion into Q4 2017 peak
+Fold_2,Logistic Regression,2017-01-01 to 2018-01-31,2018-02-01 to 2018-04-30,50495,2856,5.66,20356,2560,12.58,0.3291,0.7181,0.1032,2.62,Includes 2017 peak; tests during Feb-Mar 2018 logistics spike
+Fold_2,HistGradientBoosting,2017-01-01 to 2018-01-31,2018-02-01 to 2018-04-30,50495,2856,5.66,20356,2560,12.58,0.2481,0.6435,0.1064,1.97,Includes 2017 peak; tests during Feb-Mar 2018 logistics spike
+Fold_3,Logistic Regression,2017-01-01 to 2018-04-30,2018-05-01 to 2018-05-31,70851,5416,7.64,6749,443,6.56,0.3074,0.818,0.0566,4.68,Pre-test consolidation window
+Fold_3,HistGradientBoosting,2017-01-01 to 2018-04-30,2018-05-01 to 2018-05-31,70851,5416,7.64,6749,443,6.56,0.294,0.815,0.0545,4.48,Pre-test consolidation window

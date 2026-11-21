@@ -1,0 +1,32 @@
+category,check_name,computed_value,expected_value,difference,status
+Row Counts,fact_order_delivery rows,99441,99441,0.0,PASS
+Row Counts,fact_order_items rows,112650,112650,0.0,PASS
+Row Counts,dim_customer rows,96096,96096,0.0,PASS
+Row Counts,raw_orders rows,99441,99441,0.0,PASS
+Row Counts,dim_seller rows,3095,3095,0.0,PASS
+Row Counts,dim_product rows,32951,32951,0.0,PASS
+Key Uniqueness,fact_order_delivery.order_id unique,99441,99441,0.0,PASS
+Key Uniqueness,dim_customer.customer_unique_id unique,96096,96096,0.0,PASS
+Key Uniqueness,dim_seller.seller_id unique,3095,3095,0.0,PASS
+Key Uniqueness,dim_product.product_id unique,32951,32951,0.0,PASS
+Referential Integrity,All fact_order_items.order_id in fact_order_delivery,True,True,0.0,PASS
+Referential Integrity,All fact_order_items.seller_id in dim_seller,True,True,0.0,PASS
+Referential Integrity,All fact_order_items.product_id in dim_product,True,True,0.0,PASS
+Referential Integrity,All fact_order_payments.order_id in fact_order_delivery,True,True,0.0,PASS
+Target Definition,Total Raw Orders,99441,99441,0.0,PASS
+Target Definition,Raw Delivered Orders,96478,96478,0.0,PASS
+Target Definition,Delivered with Null Customer Date,8,8,0.0,PASS
+Target Definition,Valid Delivered Orders (with date),96470,96470,0.0,PASS
+Target Definition,Total Non-Delivered Orders,2963,2963,0.0,PASS
+Target Definition,fact_order_delivery valid delivered count,96470,96470,0.0,PASS
+Target Definition,Date-level Late Orders,6534,6534,0.0,PASS
+Target Definition,Date-level On-Time Orders,89936,89936,0.0,PASS
+Target Definition,Date-level Late Rate %,6.7731,6.7731,0.0,PASS
+Timestamp Anomalies,carrier_before_purchase in valid delivered,165,165,0.0,PASS
+Timestamp Anomalies,carrier_before_approved in valid delivered,1350,1350,0.0,PASS
+Timestamp Anomalies,delivery_before_carrier in valid delivered,23,23,0.0,PASS
+Timestamp Anomalies,delivery_before_purchase in valid delivered,0,0,0.0,PASS
+Timestamp Anomalies,delivery_before_approved in valid delivered,61,61,0.0,PASS
+Timestamp Anomalies,null carrier_ts in valid delivered,1,1,0.0,PASS
+Timestamp Anomalies,null approved_ts in valid delivered,14,14,0.0,PASS
+Timestamp Anomalies,is_anomalous_sequence in valid delivered,1373,1373,0.0,PASS

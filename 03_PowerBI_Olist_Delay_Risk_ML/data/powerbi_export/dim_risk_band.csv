@@ -1,0 +1,5 @@
+risk_band,sort_order,action_tier,sla_target
+Low Risk (0-80%),1,Standard Automated Notification,Normal Monitoring
+Moderate Risk (80-95%),2,Proactive Carrier Ping,Check Tracking Milestones
+High Risk (95-98%),3,Operational Support Escalation,Priority Route Follow-Up
+Critical Queue (Top 2%),4,Urgent Manual Investigation,Proactive Customer SLA Notice

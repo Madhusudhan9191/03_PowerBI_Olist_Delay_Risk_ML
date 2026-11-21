@@ -1,0 +1,64 @@
+Index,Measure_Name,Value
+01,Total Orders,99441
+02,Delivered Orders,96478
+03,Valid Delivered Orders,96470
+04,Gross Item Revenue,13591643.699999858
+05,Total Freight Billed,2251909.54
+06,Total Customer Spend,15843553.240000019
+07,Captured Payment Value,16008872.12
+08,Total Unique Customers,96096
+09,Total Active Sellers,3095
+10,On-Time Orders,89936
+11,Late Orders,6534
+12,On-Time Delivery Rate %,0.9322690992018244
+13,Late Delivery Rate %,0.06773090079817559
+14,Average Delay Days (Late Orders),10.620140801958984
+15,Average Promised Lead Time Days,24.37273763864414
+16,Average Actual Cycle Days,12.558217440655117
+17,ETA Safety Buffer Days,11.814520197989022
+18,Total Reviewed Orders,98673
+19,Delivered Reviewed Orders,95824
+20,Average Review Score,4.086386346822333
+21,Average Review Score (Delivered),4.155879529136751
+22,Average Review Score (On-Time),4.290386055923885
+23,Average Review Score (Late),2.270490518727472
+24,Review Score Gap (Late vs On-Time),-2.0198955371964127
+25,Negative Reviews Count (1-2 Star),12272
+26,Negative Review Share %,0.128068124895642
+27,Negative Review Share % (Late),0.6241968343519825
+28,Negative Review Share % (On-Time),0.09267354628087161
+29,5-Star Reviews Count,56748
+30,5-Star Review Share % (Late),0.16533458705532048
+31,5-Star Review Share % (On-Time),0.6226647138400992
+32,Pre-Delivery Late Reviews Count,4751
+33,Pre-Delivery Late Review Share %,0.74455414511832
+34,Avg Review Score (Pre-Delivery Late),1.8396127131130289
+35,Avg Review Score (Post-Delivery Late),3.5263803680981596
+36,Clean Fulfillment Orders,95082
+37,Average Handling Days,2.851748588586693
+38,Average Transit Days,9.364111536358093
+39,Average Fulfillment Cycle Days,12.61796385120213
+40,Handling Share of Fulfillment %,0.23344861962201047
+41,Transit Share of Fulfillment %,0.7665513803779895
+42,Interstate Orders Count,61022
+43,Intrastate Orders Count,34060
+44,Interstate On-Time Rate %,0.9188653272590214
+45,Intrastate On-Time Rate %,0.9542571931884909
+46,Mix-Adjusted Performance Gap pp (RJ),-5.39985610490803
+47,Mix-Adjusted Performance Gap pp (SP),1.0723860945481056
+48,Mix-Adjusted Performance Gap pp (AL),-11.675884899231459
+49,Late Dispatch Rate % (Tier 1),0.08069003895381191
+50,Late Dispatch Rate % (Tier 2),0.09310948066529152
+51,Late Dispatch Rate % (Tier 3),0.09863327539895718
+52,Late Dispatch Rate % (Tier 4),0.11071012159236022
+53,Total Repeat Customers,2997
+54,Repeat Customer Rate %,0.031187562437562436
+55,Delivered Repeat Rate % (On-Time),0.03035806655554917
+56,Delivered Repeat Rate % (Late),0.025177025963808025
+57,Delivered Repeat Rate Gap pp,-0.5181040591741144
+58,Mature Repeat Rate % (On-Time),0.05125095994503052
+59,Mature Repeat Rate % (Late),0.037756202804746494
+60,Mature Repeat Rate Gap pp,-1.3494757140284024
+61,Mature Delivered Repeat Rate % (On-Time),0.048906673133664764
+62,Mature Delivered Repeat Rate % (Late),0.03559870550161812
+63,Mature Delivered Repeat Rate Gap pp,-1.3307967632046642

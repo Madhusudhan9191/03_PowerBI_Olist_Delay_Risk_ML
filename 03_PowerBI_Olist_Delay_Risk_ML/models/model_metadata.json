@@ -1,0 +1,150 @@
+{
+  "model_name": "Logistic Regression (Balanced)",
+  "algorithm": "LogisticRegression",
+  "selection_rule": "Programmatic selection by highest Validation PR-AUC across 4 candidates",
+  "candidate_comparison": [
+    {
+      "model_name": "Logistic Regression",
+      "model_obj": "LogisticRegression(C=0.1, max_iter=1000, random_state=42)",
+      "val_pr_auc": 0.2848,
+      "val_roc_auc": 0.7142,
+      "test_pr_auc": 0.3344,
+      "test_roc_auc": 0.839,
+      "test_recall_at_top5": 0.4111
+    },
+    {
+      "model_name": "Logistic Regression (Balanced)",
+      "model_obj": "LogisticRegression(C=0.1, class_weight='balanced', max_iter=1000,\n                   random_state=42)",
+      "val_pr_auc": 0.2905,
+      "val_roc_auc": 0.7254,
+      "test_pr_auc": 0.2933,
+      "test_roc_auc": 0.8364,
+      "test_recall_at_top5": 0.3767
+    },
+    {
+      "model_name": "HistGradientBoosting",
+      "model_obj": "HistGradientBoostingClassifier(l2_regularization=1.0, learning_rate=0.05,\n                               max_iter=150, min_samples_leaf=30,\n                               random_state=42)",
+      "val_pr_auc": 0.2144,
+      "val_roc_auc": 0.6191,
+      "test_pr_auc": 0.285,
+      "test_roc_auc": 0.7692,
+      "test_recall_at_top5": 0.3483
+    },
+    {
+      "model_name": "HistGradientBoosting (Balanced)",
+      "model_obj": "HistGradientBoostingClassifier(class_weight='balanced', l2_regularization=1.0,\n                               learning_rate=0.05, max_iter=150,\n                               min_samples_leaf=30, random_state=42)",
+      "val_pr_auc": 0.2735,
+      "val_roc_auc": 0.6734,
+      "test_pr_auc": 0.2292,
+      "test_roc_auc": 0.7649,
+      "test_recall_at_top5": 0.2436
+    }
+  ],
+  "calibration": "Sigmoid (Platt Scaling) fitted on validation set",
+  "hyperparameters": {
+    "C": "0.1",
+    "class_weight": "balanced",
+    "dual": "False",
+    "fit_intercept": "True",
+    "intercept_scaling": "1",
+    "l1_ratio": "0.0",
+    "max_iter": "1000",
+    "n_jobs": "None",
+    "penalty": "deprecated",
+    "random_state": "42",
+    "solver": "lbfgs",
+    "tol": "0.0001",
+    "verbose": "0",
+    "warm_start": "False"
+  },
+  "training_data_period": "2017-01-05 to 2018-02-28",
+  "validation_data_period": "2018-03-01 to 2018-05-31",
+  "test_data_period": "2018-06-01 to 2018-08-22",
+  "train_rows": 57050,
+  "validation_rows": 20550,
+  "test_rows": 18107,
+  "optimal_threshold_f1": 0.1581,
+  "top5_threshold": 0.2723,
+  "calibration_in_the_large": {
+    "validation_observed_late_rate": 0.1011,
+    "validation_mean_predicted_prob": 0.1011,
+    "test_observed_late_rate": 0.0369,
+    "test_mean_predicted_prob": 0.1357,
+    "may_recalibrated_test_mean_predicted_prob": 0.0861
+  },
+  "test_metrics": {
+    "pr_auc": 0.2933,
+    "roc_auc": 0.8364,
+    "calibrated_brier_score": 0.0439,
+    "uncalibrated_brier_score": 0.3989,
+    "brier_skill_score_vs_prior": -0.2035,
+    "may_recalibrated_brier_score": 0.0344,
+    "may_recalibrated_bss_vs_prior": 0.0564,
+    "calibrated_ece": 0.0991,
+    "uncalibrated_ece": 0.5707,
+    "f1_optimal_threshold": 0.1581,
+    "precision_at_opt_threshold": 0.0944,
+    "recall_at_opt_threshold": 0.8012,
+    "f1_at_opt_threshold": 0.1689,
+    "alerted_orders_at_opt_threshold": 5677,
+    "alert_rate_at_opt_threshold": 31.35,
+    "top2_pct_queue": {
+      "k_pct": 2.0,
+      "n_alerted": 362,
+      "alert_rate_pct": 2.0,
+      "true_positives": 152,
+      "recall": 0.2272,
+      "precision": 0.4199,
+      "f1": 0.2949,
+      "lift_vs_prior": 11.36,
+      "lift_vs_heuristic": 3.12
+    },
+    "top5_pct_queue": {
+      "k_pct": 5.0,
+      "n_alerted": 905,
+      "alert_rate_pct": 5.0,
+      "true_positives": 252,
+      "recall": 0.3767,
+      "precision": 0.2785,
+      "f1": 0.3202,
+      "lift_vs_prior": 7.54,
+      "lift_vs_heuristic": 2.07
+    },
+    "top10_pct_queue": {
+      "k_pct": 10.0,
+      "n_alerted": 1810,
+      "alert_rate_pct": 10.0,
+      "true_positives": 350,
+      "recall": 0.5232,
+      "precision": 0.1934,
+      "f1": 0.2824,
+      "lift_vs_prior": 5.23,
+      "lift_vs_heuristic": 1.44
+    }
+  },
+  "bootstrap_95_ci": {
+    "pr_auc": {
+      "mean": 0.2936,
+      "ci_lower": 0.2603,
+      "ci_upper": 0.3251
+    },
+    "roc_auc": {
+      "mean": 0.836,
+      "ci_lower": 0.8206,
+      "ci_upper": 0.8512
+    },
+    "recall_at_top5": {
+      "mean": 0.3768,
+      "ci_lower": 0.3448,
+      "ci_upper": 0.4097
+    }
+  },
+  "baseline_comparison": {
+    "baseline_a_prior_pr_auc": 0.0369,
+    "baseline_b_route_rule_pr_auc": 0.0407,
+    "baseline_c_heuristic_pr_auc": 0.1344,
+    "model_lift_vs_heuristic_primary": 2.18,
+    "model_lift_vs_prior": 7.94,
+    "model_lift_vs_route_rule": 7.2
+  }
+}

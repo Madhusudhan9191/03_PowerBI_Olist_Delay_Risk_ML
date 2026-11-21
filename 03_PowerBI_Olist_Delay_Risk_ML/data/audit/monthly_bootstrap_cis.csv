@@ -1,0 +1,4 @@
+year_month,order_count,late_orders,pr_auc,pr_auc_ci_lower,pr_auc_ci_upper,roc_auc,brier_score,recall_at_top5,recall_top5_ci_lower,recall_top5_ci_upper
+2018-06,6096,71,0.1138,0.0533,0.1947,0.7686,0.0204,0.3099,0.2012,0.4132
+2018-07,6156,208,0.3717,0.3041,0.4384,0.8069,0.0442,0.4279,0.3596,0.4899
+2018-08,5855,390,0.2933,0.2437,0.3441,0.8194,0.068,0.2641,0.2245,0.3044

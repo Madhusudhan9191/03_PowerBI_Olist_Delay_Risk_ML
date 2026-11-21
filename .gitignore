@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Power BI temp files & caches
+*.pbit.backup
+*.pbix.backup
+*.tmp
+AutoSave*
+
+# Raw Kaggle Data (large raw CSVs)
+**/data/raw/*.csv
+!**/data/raw/product_category_name_translation.csv

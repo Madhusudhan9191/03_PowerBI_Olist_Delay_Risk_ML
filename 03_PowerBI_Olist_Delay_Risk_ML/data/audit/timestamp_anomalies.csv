@@ -1,0 +1,9 @@
+anomaly_check,count,pct_of_valid_delivered
+carrier_ts < purchase_ts (carrier before purchase),165,0.171
+carrier_ts < approved_ts (carrier before approved),1350,1.3994
+customer_ts < carrier_ts (delivery before carrier),23,0.0238
+customer_ts < purchase_ts (delivery before purchase),0,0.0
+customer_ts < approved_ts (delivery before approved),61,0.0632
+null carrier_ts among valid delivered,1,0.001
+null approved_ts among valid delivered,14,0.0145
+warehouse is_anomalous_sequence (any anomaly),1373,1.4232

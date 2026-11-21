@@ -1,0 +1,4 @@
+year_month,order_count,late_orders,late_rate_pct,mean_predicted_prob,pr_auc,roc_auc,brier_score,recall_at_top5
+2018-06,6096,71,1.16,0.0852,0.1138,0.7686,0.0204,0.3099
+2018-07,6156,208,3.38,0.1472,0.3717,0.8069,0.0442,0.4279
+2018-08,5855,390,6.66,0.1762,0.2933,0.8194,0.068,0.2641

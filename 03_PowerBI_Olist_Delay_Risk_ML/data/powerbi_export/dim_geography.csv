@@ -1,0 +1,28 @@
+state_code,state_name,region,is_hub
+SP,São Paulo,Sudeste,1
+RJ,Rio de Janeiro,Sudeste,0
+MG,Minas Gerais,Sudeste,0
+ES,Espírito Santo,Sudeste,0
+PR,Paraná,Sul,0
+SC,Santa Catarina,Sul,0
+RS,Rio Grande do Sul,Sul,0
+DF,Distrito Federal,Centro-Oeste,0
+GO,Goiás,Centro-Oeste,0
+MT,Mato Grosso,Centro-Oeste,0
+MS,Mato Grosso do Sul,Centro-Oeste,0
+BA,Bahia,Nordeste,0
+PE,Pernambuco,Nordeste,0
+CE,Ceará,Nordeste,0
+MA,Maranhão,Nordeste,0
+PB,Paraíba,Nordeste,0
+RN,Rio Grande do Norte,Nordeste,0
+AL,Alagoas,Nordeste,0
+SE,Sergipe,Nordeste,0
+PI,Piauí,Nordeste,0
+PA,Pará,Norte,0
+AM,Amazonas,Norte,0
+RO,Rondônia,Norte,0
+TO,Tocantins,Norte,0
+AC,Acre,Norte,0
+AP,Amapá,Norte,0
+RR,Roraima,Norte,0
